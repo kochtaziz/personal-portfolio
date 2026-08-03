@@ -1,0 +1,97 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --muted: #64748b;
+  --surface: #ffffff;
+}
+
+.dark {
+  --background: #020617;
+  --foreground: #f8fafc;
+  --muted: #94a3b8;
+  --surface: #0f172a;
+}
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  color-scheme: light;
+  scrollbar-gutter: stable;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-surface: var(--surface);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  min-width: 320px;
+}
+
+::selection {
+  background: #0ea5e9;
+  color: white;
+}
+
+.mesh-bg {
+  background:
+    radial-gradient(
+      circle at 18% 18%,
+      rgba(14, 165, 233, 0.16),
+      transparent 26rem
+    ),
+    radial-gradient(
+      circle at 82% 12%,
+      rgba(16, 185, 129, 0.14),
+      transparent 22rem
+    ),
+    radial-gradient(
+      circle at 52% 72%,
+      rgba(244, 114, 182, 0.1),
+      transparent 26rem
+    );
+}
+
+.dark .mesh-bg {
+  background:
+    radial-gradient(
+      circle at 20% 20%,
+      rgba(56, 189, 248, 0.14),
+      transparent 28rem
+    ),
+    radial-gradient(
+      circle at 82% 18%,
+      rgba(45, 212, 191, 0.11),
+      transparent 24rem
+    ),
+    radial-gradient(
+      circle at 50% 80%,
+      rgba(248, 113, 113, 0.09),
+      transparent 25rem
+    );
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
