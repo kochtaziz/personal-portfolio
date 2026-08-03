@@ -131,6 +131,9 @@ export const featuredProjects = [
       "This project strengthened practical IoT system design across embedded wiring, sensor placement, enclosure constraints, local networking, data capture, and the importance of protecting client-owned implementation details while still documenting professional contribution.",
     futureImprovements:
       "Future improvements can include calibrated two-direction counting logic, cleaner production enclosures, offline buffering, dashboard visualizations, fuel-consumption model refinement, alerting for disconnected devices, and a secure admin interface.",
+    githubUrl:
+      "https://github.com/kochtaziz/smart-bus-passenger-analytics-system",
+    githubLabel: "Case-study repo",
     sourceCodeNote: "Private client code",
     docsUrl: "/projects/smart-bus-passenger-analytics/README.md",
   },

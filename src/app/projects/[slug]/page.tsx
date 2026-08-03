@@ -41,6 +41,7 @@ export default async function ProjectDetailPage({
   const lessonsLearned = textField("lessonsLearned");
   const futureImprovements = textField("futureImprovements");
   const githubUrl = textField("githubUrl");
+  const githubLabel = textField("githubLabel");
   const liveDemoUrl = textField("liveDemoUrl");
   const docsUrl = textField("docsUrl");
   const sourceCodeNote = textField("sourceCodeNote");
@@ -103,7 +104,7 @@ export default async function ProjectDetailPage({
               <Button asChild variant="secondary">
                 <a href={githubUrl} target="_blank" rel="noreferrer">
                   <Code2 className="h-4 w-4" />
-                  View GitHub
+                  {githubLabel ?? "View GitHub"}
                 </a>
               </Button>
             ) : (
