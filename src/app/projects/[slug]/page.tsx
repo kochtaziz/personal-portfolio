@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { ArrowLeft, Code2, ExternalLink } from "lucide-react";
+import { ArrowLeft, Code2, ExternalLink, FileText } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
@@ -42,6 +42,8 @@ export default async function ProjectDetailPage({
   const futureImprovements = textField("futureImprovements");
   const githubUrl = textField("githubUrl");
   const liveDemoUrl = textField("liveDemoUrl");
+  const docsUrl = textField("docsUrl");
+  const sourceCodeNote = textField("sourceCodeNote");
   const features = listField("features");
 
   const sections: Array<[string, string]> = [
@@ -107,9 +109,17 @@ export default async function ProjectDetailPage({
             ) : (
               <Button type="button" variant="secondary" disabled>
                 <Code2 className="h-4 w-4" />
-                Private repository
+                {sourceCodeNote ?? "Private repository"}
               </Button>
             )}
+            {docsUrl ? (
+              <Button asChild variant="secondary">
+                <a href={docsUrl} target="_blank" rel="noreferrer">
+                  <FileText className="h-4 w-4" />
+                  Case README
+                </a>
+              </Button>
+            ) : null}
             {liveDemoUrl ? (
               <Button asChild variant="secondary">
                 <a href={liveDemoUrl} target="_blank" rel="noreferrer">

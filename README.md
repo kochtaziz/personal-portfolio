@@ -1,36 +1,70 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Mohamed Aziz Kocht Portfolio
 
-## Getting Started
+Professional portfolio website for Mohamed Aziz Kocht, built as a central hub for projects, certifications, skills, resume, blog structure, GitHub, LinkedIn, and contact.
 
-First, run the development server:
+## Tech Stack
+
+- Next.js App Router
+- React
+- TypeScript
+- Tailwind CSS
+- Framer Motion
+- Lucide React
+- Vercel Analytics
+- Vercel deployment
+
+## Main Sections
+
+- Home
+- About
+- Projects
+- Certifications
+- Skills
+- Experience
+- Resume
+- Blog
+- Contact
+
+## Featured Projects
+
+- AI Investment Research Platform
+- Smart Electricity Outage Notification Platform
+- Smart Bus Passenger Analytics System
+- Enterprise IT Infrastructure Lab
+- OnePark Reservation System
+- Arduino RC Car
+- Wireless Packet Monitor
+- Wireless Packet Receiver
+
+## Private Client Work
+
+Some portfolio entries describe private freelance or client-owned projects. For those projects, source code, credentials, API details, database schemas, and deployment configuration are intentionally not published. Public case studies include only approved descriptions, architecture summaries, and non-sensitive media.
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open `http://localhost:3000`.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Quality Checks
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```bash
+npm run lint
+npm run build
+```
 
-## Learn More
+## Contact Backend
 
-To learn more about Next.js, take a look at the following resources:
+The contact form posts to `/api/contact`. Email delivery can be enabled with these environment variables:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```text
+RESEND_API_KEY=
+CONTACT_TO_EMAIL=
+CONTACT_FROM_EMAIL=
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+See `CONTACT_BACKEND.md` for setup notes.
 
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

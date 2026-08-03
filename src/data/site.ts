@@ -97,6 +97,44 @@ export const featuredProjects = [
     githubUrl: "https://github.com/kochtaziz/electricity-cut-alerts-mvp",
   },
   {
+    slug: "smart-bus-passenger-analytics-system",
+    title: "Smart Bus Passenger Analytics System",
+    description:
+      "A private freelance ESP32 IoT system for bus-door passenger counting, GPS context, local-server storage, and route revenue analysis.",
+    status: "Private freelance build",
+    icon: Network,
+    tags: ["ESP32", "IoT", "GPS", "Sensors", "Local Server"],
+    image: "/media/projects/smart-bus-passenger-counter-2.jpeg",
+    screenshots: [
+      "/media/projects/smart-bus-passenger-counter-2.jpeg",
+      "/media/projects/smart-bus-passenger-counter-1.jpeg",
+      "/media/projects/smart-bus-passenger-counter-display.jpeg",
+      "/media/projects/smart-bus-passenger-counter-assembly.jpeg",
+    ],
+    problem:
+      "Bus operators need reliable passenger entry and exit data tied to time and location so they can compare route activity with fuel usage and estimate operational gains or losses.",
+    solution:
+      "I built a private ESP32-based IoT prototype using two mounted sensor boxes near the bus door. The system combines laser, GPS, and sound-sensor inputs, shows online/offline status on a small display, and sends event data to a local server for storage and later analysis.",
+    features: [
+      "Door-mounted passenger entry and exit detection",
+      "GPS location context for each activity window",
+      "Laser sensor input for crossing detection",
+      "Sound sensor input for additional event context",
+      "Local display for online/offline status",
+      "Local-server data storage",
+      "Analytics concept for fuel usage and possible gain/loss prediction",
+      "Private-client implementation with public portfolio credit",
+    ],
+    architecture:
+      "Two ESP32-powered sensor boxes sit near the bus door and collect door activity signals. The embedded layer filters sensor readings into passenger events, attaches timestamp and GPS context, updates the local status display, and sends records to a local server where the data can be stored and used by future reporting and prediction workflows.",
+    lessonsLearned:
+      "This project strengthened practical IoT system design across embedded wiring, sensor placement, enclosure constraints, local networking, data capture, and the importance of protecting client-owned implementation details while still documenting professional contribution.",
+    futureImprovements:
+      "Future improvements can include calibrated two-direction counting logic, cleaner production enclosures, offline buffering, dashboard visualizations, fuel-consumption model refinement, alerting for disconnected devices, and a secure admin interface.",
+    sourceCodeNote: "Private client code",
+    docsUrl: "/projects/smart-bus-passenger-analytics/README.md",
+  },
+  {
     slug: "enterprise-it-infrastructure-lab",
     title: "Enterprise IT Infrastructure Lab",
     description:
@@ -259,13 +297,6 @@ export const additionalProjects = [
     description:
       "Employee attendance prototype using MicroPython, RFID, and an LCD display to register pointing events.",
     tags: ["MicroPython", "RFID", "LCD"],
-  },
-  {
-    title: "Smart Bus Passenger and GPS System",
-    period: "Jan 2026 - May 2026",
-    description:
-      "Transportation-management concept combining passenger counting and GPS tracking for smart mobility workflows.",
-    tags: ["IoT", "GPS", "Transport"],
   },
   {
     title: "ESP32 WiFi Communication and Security Experiments",
