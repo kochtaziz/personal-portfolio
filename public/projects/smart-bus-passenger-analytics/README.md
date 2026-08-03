@@ -32,6 +32,8 @@ The prototype uses an ESP32 controller with connected sensing modules:
 
 ## System Flow
 
+![Smart Bus Passenger Analytics workflow diagram](/media/projects/smart-bus-passenger-analytics-diagram.png)
+
 1. Sensors monitor the bus door area.
 2. The ESP32 filters raw signals into entry and exit events.
 3. Each event is timestamped and paired with GPS/location context.
@@ -63,4 +65,3 @@ Door sensors
 ## Privacy Note
 
 This portfolio entry intentionally does not publish the client-owned source code, credentials, API details, database schema, or deployment-specific configuration. Public materials are limited to non-sensitive project description and approved prototype photos.
-

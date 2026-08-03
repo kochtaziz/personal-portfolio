@@ -104,8 +104,9 @@ export const featuredProjects = [
     status: "Private freelance build",
     icon: Network,
     tags: ["ESP32", "IoT", "GPS", "Sensors", "Local Server"],
-    image: "/media/projects/smart-bus-passenger-counter-2.jpeg",
+    image: "/media/projects/smart-bus-passenger-analytics-diagram.png",
     screenshots: [
+      "/media/projects/smart-bus-passenger-analytics-diagram.png",
       "/media/projects/smart-bus-passenger-counter-2.jpeg",
       "/media/projects/smart-bus-passenger-counter-1.jpeg",
       "/media/projects/smart-bus-passenger-counter-display.jpeg",
