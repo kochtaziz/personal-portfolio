@@ -17,17 +17,35 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://aziz-kocht.vercel.app"),
+  metadataBase: new URL("https://personal-portfolio-one-orcin-67.vercel.app"),
   title: {
     default: "Mohamed Aziz Kocht | Portfolio",
     template: "%s | Mohamed Aziz Kocht",
   },
   description:
     "Professional portfolio for Mohamed Aziz Kocht, featuring projects, certifications, skills, resume, blog, and contact information.",
+  keywords: [
+    "Mohamed Aziz Kocht",
+    "Aziz Kocht",
+    "IT Support",
+    "Customer Support",
+    "Networking",
+    "ESP32",
+    "IoT",
+    "Portfolio",
+    "Tunisia",
+  ],
+  authors: [{ name: "Mohamed Aziz Kocht" }],
+  creator: "Mohamed Aziz Kocht",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
     title: "Mohamed Aziz Kocht | Portfolio",
     description:
       "A modern career hub for projects, certifications, skills, resume, blog, and freelance work.",
+    url: "https://personal-portfolio-one-orcin-67.vercel.app",
+    siteName: "Mohamed Aziz Kocht Portfolio",
     type: "website",
   },
 };
