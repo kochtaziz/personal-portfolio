@@ -112,13 +112,15 @@ export default function Home() {
                     className="rounded-lg border border-slate-200 bg-white p-4 dark:border-white/10 dark:bg-white/5"
                   >
                     <div className="flex items-start gap-3">
-                      <Image
-                        src={project.image}
-                        alt=""
-                        width={80}
-                        height={54}
-                        className="hidden aspect-[4/3] h-auto w-20 rounded-md object-cover sm:block"
-                      />
+                      <span className="relative hidden h-16 w-20 shrink-0 overflow-hidden rounded-md bg-slate-100 dark:bg-slate-950 sm:block">
+                        <Image
+                          src={project.image}
+                          alt=""
+                          fill
+                          sizes="80px"
+                          className="object-contain p-1"
+                        />
+                      </span>
                       <div className="grid h-10 w-10 shrink-0 place-items-center rounded-md bg-slate-950 text-white dark:bg-white dark:text-slate-950">
                         <project.icon className="h-5 w-5" />
                       </div>
@@ -165,13 +167,15 @@ export default function Home() {
           <div className="mt-8 grid gap-4 lg:grid-cols-3">
             {featuredProjects.map((project) => (
               <Card key={project.title} className="overflow-hidden p-0">
-                <Image
-                  src={project.image}
-                  alt={`${project.title} visual`}
-                  width={1200}
-                  height={800}
-                  className="aspect-[16/10] h-auto w-full object-cover"
-                />
+                <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100 dark:bg-slate-950">
+                  <Image
+                    src={project.image}
+                    alt={`${project.title} visual`}
+                    fill
+                    sizes="(min-width: 1024px) 33vw, 100vw"
+                    className="object-contain p-3"
+                  />
+                </div>
                 <div className="p-5">
                   <div className="flex items-center justify-between gap-4">
                     <div className="grid h-11 w-11 place-items-center rounded-md bg-slate-100 text-slate-950 dark:bg-white/10 dark:text-white">

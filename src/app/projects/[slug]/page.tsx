@@ -136,14 +136,16 @@ export default async function ProjectDetailPage({
             )}
           </div>
         </div>
-        <Image
-          src={project.image}
-          alt={`${project.title} visual`}
-          width={1200}
-          height={800}
-          priority
-          className="aspect-[16/10] h-auto w-full rounded-lg border border-slate-200 object-cover shadow-2xl dark:border-white/10"
-        />
+        <div className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-slate-200 bg-slate-100 shadow-2xl dark:border-white/10 dark:bg-slate-950">
+          <Image
+            src={project.image}
+            alt={`${project.title} visual`}
+            fill
+            sizes="(min-width: 1024px) 50vw, 100vw"
+            priority
+            className="object-contain p-4"
+          />
+        </div>
       </div>
 
       <div className="mt-12 grid gap-4 lg:grid-cols-2">
@@ -183,14 +185,18 @@ export default async function ProjectDetailPage({
           </h2>
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             {project.screenshots.map((screenshot) => (
-              <Image
+              <div
                 key={screenshot}
-                src={screenshot}
-                alt={`${project.title} screenshot`}
-                width={1200}
-                height={800}
-                className="h-auto w-full rounded-lg border border-slate-200 object-cover shadow-sm dark:border-white/10"
-              />
+                className="relative aspect-[16/10] w-full overflow-hidden rounded-lg border border-slate-200 bg-slate-100 shadow-sm dark:border-white/10 dark:bg-slate-950"
+              >
+                <Image
+                  src={screenshot}
+                  alt={`${project.title} screenshot`}
+                  fill
+                  sizes="(min-width: 768px) 50vw, 100vw"
+                  className="object-contain p-3"
+                />
+              </div>
             ))}
           </div>
         </div>

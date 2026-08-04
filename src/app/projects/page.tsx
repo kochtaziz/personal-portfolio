@@ -23,13 +23,15 @@ export default function ProjectsPage() {
         {projects.map((project) => (
           <Link key={project.slug} href={`/projects/${project.slug}`}>
             <Card className="h-full overflow-hidden p-0 transition hover:-translate-y-1 hover:shadow-xl">
-              <Image
-                src={project.image}
-                alt={`${project.title} visual`}
-                width={1200}
-                height={800}
-                className="aspect-[16/10] h-auto w-full object-cover"
-              />
+              <div className="relative aspect-[16/10] w-full overflow-hidden bg-slate-100 dark:bg-slate-950">
+                <Image
+                  src={project.image}
+                  alt={`${project.title} visual`}
+                  fill
+                  sizes="(min-width: 1280px) 33vw, (min-width: 768px) 50vw, 100vw"
+                  className="object-contain p-3"
+                />
+              </div>
               <div className="p-5">
                 <div className="flex items-center justify-between gap-3">
                   <Badge>{project.status}</Badge>
