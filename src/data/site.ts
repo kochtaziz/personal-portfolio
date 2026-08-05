@@ -161,6 +161,139 @@ export const featuredProjects = [
 
 export const projectBacklog = [
   {
+    slug: "oly-drugstore-pos",
+    title: "Oly Drugstore POS",
+    description:
+      "A bilingual Windows desktop POS and stock-management app for small Tunisian drugstores, built around cashier shifts, barcode scanning, register control, and local offline storage.",
+    status: "Desktop app prototype",
+    icon: Store,
+    tags: ["C#", "WinForms", "POS", "Inventory", "FR/EN"],
+    image: "/media/projects/oly-pos-cashier.png",
+    screenshots: [
+      "/media/projects/oly-pos-cashier.png",
+      "/media/projects/oly-pos-admin.png",
+      "/media/projects/oly-pos-login.png",
+    ],
+    problem:
+      "Small drugstores often run on old Windows computers with barcode scanners and receipt printers, but legacy POS software can be slow, hard to align with current workflows, and difficult to extend toward online ordering.",
+    solution:
+      "I built a touch-friendly C# desktop application with separate admin and cashier flows. Admins manage products and stock, while cashiers handle scanning, manual product selection, discounts, returns, debts, withdrawals, payment methods, and end-of-shift reports.",
+    features: [
+      "Admin and cashier login",
+      "Product creation, editing, removal, and stock tracking",
+      "Barcode scanner workflow with manual product fallback",
+      "Purchase price, selling price, tax, quantity, and expiry data",
+      "Cash, card, online, and in-store payment tracking",
+      "Employee discounts, returns, customer debt, and withdrawals",
+      "Shift close report with 200 DT cash-fund logic",
+      "French and English interface",
+    ],
+    architecture:
+      "The first version is a C# WinForms desktop app designed for local Windows machines. It uses local XML storage for offline reliability, a structured model layer for products, users, sales, and register sessions, and a UI layer organized around cashier/admin roles. Future versions can move the data layer to SQLite and sync selected records to a central backend.",
+    lessonsLearned:
+      "This project reinforced that business software must match the daily physical workflow: scanners, touch screens, cash drawer habits, ticket printing, stock updates, and shift closure matter as much as the code structure.",
+    futureImprovements:
+      "Next improvements include SQLite storage, ESC/POS printer commands, product import/export, permission management, multi-store sync, delivery order integration, and a reporting dashboard for owners.",
+    githubUrl: "https://github.com/kochtaziz/oly-drugstore-pos",
+  },
+  {
+    slug: "combine-plage-online-store",
+    title: "Combine Plage Online Store",
+    description:
+      "A reconstructed beach and diving e-commerce prototype with a customer storefront, search, categories, product detail modal, and admin analytics dashboard.",
+    status: "Completed web prototype",
+    icon: Store,
+    tags: ["Next.js", "React", "TypeScript", "E-commerce", "Dashboard"],
+    image: "/media/projects/combine-plage-fullscreen.png",
+    screenshots: ["/media/projects/combine-plage-fullscreen.png"],
+    problem:
+      "A small online store needs both a clean customer shopping experience and a simple internal dashboard for products, visits, stock visibility, and sales output.",
+    solution:
+      "I rebuilt the store concept as a modern web prototype called Combine Plage, focused on beach, diving, and outdoor products. The app includes product search, category filters, detail viewing, and an admin dashboard with zeroed sales and stock values ready for real data.",
+    features: [
+      "Customer storefront",
+      "Admin dashboard",
+      "Product search and category filters",
+      "Product detail popup",
+      "Beach and diving product catalog",
+      "Visit, sales, revenue, and low-stock metrics",
+      "Responsive desktop and mobile layout",
+    ],
+    architecture:
+      "The prototype uses a Next.js and React front end with typed product data, UI-level analytics cards, a product grid, and a dashboard table. The structure leaves room for future authentication, persistent inventory, order handling, and real product images.",
+    lessonsLearned:
+      "This project helped turn a previous business idea into a cleaner modern implementation, with more attention to product-media matching, admin visibility, and a simple buying workflow.",
+    futureImprovements:
+      "Future work can add database-backed products, order checkout, admin authentication, payment integration, real analytics, and stock management connected to supplier or store data.",
+    githubUrl: "https://github.com/kochtaziz/diving-beach-store",
+  },
+  {
+    slug: "custom-shopify-storefront-demo",
+    title: "Custom Shopify Storefront Demo",
+    description:
+      "A polished custom storefront concept for a brand that wants Shopify for commerce operations while avoiding a standard template look.",
+    status: "Client proposal demo",
+    icon: Store,
+    tags: ["Next.js", "React", "Shopify", "UI Design", "E-commerce"],
+    image: "/media/projects/shopify-demo-hero.png",
+    screenshots: [
+      "/media/projects/shopify-demo-hero.png",
+      "/media/projects/shopify-demo-products.png",
+      "/media/projects/shopify-demo-integration.png",
+    ],
+    problem:
+      "A client wanted a modern, clean, custom e-commerce site for a brand, using Shopify for store management, orders, and payments without relying on a generic Shopify theme.",
+    solution:
+      "I created a fictional brand demo, Maison Oree, to show a premium custom direction: editorial hero, curated collections, product cards, brand story, and a Shopify integration section explaining how the custom front end can connect to Shopify operations.",
+    features: [
+      "Brand-first homepage",
+      "Editorial hero section",
+      "Collection navigation",
+      "Product card system",
+      "Brand story section",
+      "Shopify integration explanation",
+      "Responsive modern layout",
+    ],
+    architecture:
+      "The demo is a custom Next.js front end prepared for Shopify-backed catalog, variants, cart, checkout, payments, inventory, and order workflows. It separates the visual brand experience from the commerce operations layer.",
+    lessonsLearned:
+      "This project sharpened proposal-driven design: a client can understand a custom Shopify direction faster when the example shows real layout decisions instead of only written promises.",
+    futureImprovements:
+      "Future production work would replace placeholder branding with client assets, connect Shopify Storefront API, add cart state, product pages, checkout handoff, SEO metadata, and analytics.",
+    githubUrl: "https://github.com/kochtaziz/shopify-brand-demo",
+  },
+  {
+    slug: "used-vehicle-manager-demo",
+    title: "Used Vehicle Manager Demo",
+    description:
+      "A French-language operations dashboard concept for tracking used vehicles from purchase confirmation through workshop, transport, and resale.",
+    status: "Business app demo",
+    icon: BriefcaseBusiness,
+    tags: ["React", "Supabase", "Workflow", "Dashboard", "French UI"],
+    image: "/media/projects/vehicleflow-dashboard.png",
+    screenshots: ["/media/projects/vehicleflow-dashboard.png"],
+    problem:
+      "Used-vehicle operations need structured visibility across multiple teams: operators, administrators, drivers, and workshops all touch the same vehicle lifecycle.",
+    solution:
+      "I created VehicleFlow as a proof-of-concept dashboard in French, showing vehicle status, role-based modules, pipeline progress, priority indicators, search, and daily operational tasks.",
+    features: [
+      "Vehicle lifecycle dashboard",
+      "Search by reference, model, status, or location",
+      "Purchase-to-resale pipeline view",
+      "Admin, operator, driver, and workshop modules",
+      "Priority and progress indicators",
+      "Daily task follow-up",
+      "Supabase-ready production notes",
+    ],
+    architecture:
+      "The demo presents a front-end workflow that can evolve into a Flutter/Supabase production app. The suggested backend uses Supabase Auth, PostgreSQL, storage for vehicle files and photos, row-level security, API endpoints, and immutable audit logs.",
+    lessonsLearned:
+      "This project focused on translating a complex business process into clear operational screens, with role separation and security requirements visible from the beginning.",
+    futureImprovements:
+      "Future work can add authentication, real Supabase tables, file upload, offline mobile flows, notifications, technical documentation, and regular repository delivery for a client team.",
+    githubUrl: "https://github.com/kochtaziz/used-vehicle-manager-demo",
+  },
+  {
     slug: "onepark-reservation-system",
     title: "OnePark Reservation System",
     description:
