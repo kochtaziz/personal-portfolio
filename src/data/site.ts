@@ -330,7 +330,7 @@ export const projectBacklog = [
     slug: "arduino-rc-car",
     title: "Arduino RC Car",
     description:
-      "A Bluetooth-controlled RC car rebuilt around an ESP32, Dabble mobile controls, an L298N motor driver, and a reused RC chassis.",
+      "A Bluetooth-controlled RC car created for the INSAT Robolympix 4.0 event, rebuilt around an ESP32, Dabble mobile controls, an L298N motor driver, and a reused RC chassis.",
     status: "Completed prototype",
     icon: Zap,
     tags: ["ESP32", "Bluetooth", "L298N", "PWM", "Hardware"],
@@ -347,6 +347,7 @@ export const projectBacklog = [
     solution:
       "The car was rebuilt with an ESP32 microcontroller connected to the Dabble mobile app over Bluetooth. An L298N motor driver controls two DC motors: one motor handles forward and backward movement, while the second handles steering. The software maps GamePad buttons to movement commands and uses PWM speed limits to keep the car controllable.",
     features: [
+      "Created and presented for INSAT Robolympix 4.0",
       "Bluetooth GamePad control through Dabble",
       "Forward and backward drive commands",
       "Left and right steering commands",
@@ -660,6 +661,13 @@ export const timeline = [
     description:
       "Operated the facility independently, supported customer service, handled operational issues, and troubleshot store hardware and software problems.",
     icon: Store,
+  },
+  {
+    title: "INSAT Robolympix 4.0 - Arduino RC Car Builder",
+    date: "Event participation",
+    description:
+      "Created and presented an ESP32 Bluetooth-controlled RC car for the INSAT Robolympix 4.0 event, combining embedded wiring, motor control, Dabble mobile controls, and practical hardware debugging.",
+    icon: Zap,
   },
   {
     title: "Founder - Online Swimwear Shop",
