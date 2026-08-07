@@ -467,6 +467,16 @@ export const additionalProjects = [
 
 export const certifications = [
   {
+    issuer: "Anthropic",
+    name: "Claude 101",
+    date: "Issued Aug 2026",
+    skills: ["Claude", "AI Productivity", "Prompting", "AI Tools"],
+    image: "/media/certifications/anthropic-claude-101.png",
+    credentialUrl: "/certificates/anthropic-claude-101.pdf",
+    description:
+      "Completed Claude 101, covering foundational use of Claude for practical AI-assisted work, productivity, and effective prompting.",
+  },
+  {
     issuer: "IBM",
     name: "Customer Engagement Fundamentals",
     date: "Issued Jul 2026",
