@@ -522,6 +522,21 @@ export const certifications = [
       "Successfully completed Cisco Networking Academy's Networking Basics course, covering network communication, IPv4/IPv6 addressing, routing, switching, Ethernet, wireless networking, DNS, DHCP, NAT, and network troubleshooting.",
   },
   {
+    issuer: "Cisco Networking Academy",
+    name: "Operating Systems Basics",
+    date: "Issued Aug 2026",
+    skills: [
+      "Operating Systems",
+      "Computer Hardware",
+      "System Administration",
+      "IT Support",
+    ],
+    image: "/media/certifications/operating-systems-basics.png",
+    credentialUrl: "/certificates/operating-systems-basics.pdf",
+    description:
+      "Completed Cisco Networking Academy's Operating Systems Basics credential, strengthening core knowledge of operating system functions, device management, files, processes, and practical IT support foundations.",
+  },
+  {
     issuer: "EF SET",
     name: "English Certificate - C2 Proficient",
     date: "Issued Jul 2026",
